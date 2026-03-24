@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitpal — AI Community for GitHub</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════
+       HEADER / NAV
+  ══════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav-inner">
+      <div class="nav-logo">
+        <span class="logo-icon">🥁</span>
+        <span class="logo-text">Gitpal</span>
+        <span class="logo-badge">Beta</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#dashboard">Dashboard</a></li>
+        <li><a href="#ais">AI Suite</a></li>
+        <li><a href="#pins">Pinned</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn btn-ghost" id="connectGithubBtn">Connect GitHub</button>
+        <button class="btn btn-primary" id="openGitpalBtn">Open Gitpal <span class="orb-icon-sm">🥁</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="dashboard">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-glow"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">AI-Powered GitHub Assistant Suite</div>
+      <h1 class="hero-title">
+        Ace the palace<br />
+        with <span class="gradient-text">Gitpal</span>
+      </h1>
+      <p class="hero-subtitle">
+        Your intelligent AI companion that follows you through GitHub, surfaces
+        pinned content, and guides you toward your next professional move.
+      </p>
+      <div class="hero-cta">
+        <button class="btn btn-primary btn-lg" id="heroChatBtn">
+          <span>Start a conversation</span> <span class="orb-pulse">🥁</span>
+        </button>
+        <button class="btn btn-ghost btn-lg" id="heroLearnBtn">Explore the suite →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-val">4</span><span class="stat-label">AI agents</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">∞</span><span class="stat-label">suggestions</span></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-val">24/7</span><span class="stat-label">active</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="orb-showcase" id="orbShowcase">
+        <div class="orb-ring ring-3"></div>
+        <div class="orb-ring ring-2"></div>
+        <div class="orb-ring ring-1"></div>
+        <div class="orb-core" id="orbCore">🥁</div>
+        <div class="orb-tooltip">Hello! I'm Gitpal.<br/>Ask me anything about your repos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       AI SUITE CARDS
+  ══════════════════════════════════════ -->
+  <section class="section ai-suite" id="ais">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">The Git AI Suite</h2>
+        <p class="section-subtitle">Four specialized AI agents, each engineered to master a different dimension of your GitHub workflow.</p>
+      </div>
+
+      <div class="ai-cards">
+
+        <!-- Gitpal -->
+        <div class="ai-card ai-card--active" data-ai="gitpal">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-header">
+            <div class="ai-icon ai-icon--gitpal">🥁</div>
+            <div class="ai-meta">
+              <h3 class="ai-name">Gitpal</h3>
+              <span class="ai-alias">Ace the palace</span>
+            </div>
+            <span class="ai-badge ai-badge--active">Active</span>
+          </div>
+          <p class="ai-desc">
+            The ambient AI companion that travels with you across GitHub. Surfaces
+            pinned content, suggests professional next moves, and keeps you in
+            flow with a floating conversation orb.
+          </p>
+          <ul class="ai-features">
+            <li>Floating conversation orb</li>
+            <li>Pinned content suggestions</li>
+            <li>Professional path coaching</li>
+            <li>Context-aware guidance</li>
+          </ul>
+          <button class="btn btn-primary ai-card-btn" data-action="launch-gitpal">
+            Launch Gitpal 🥁
+          </button>
+        </div>
+
+        <!-- Gitpub -->
+        <div class="ai-card" data-ai="gitpub">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-header">
+            <div class="ai-icon ai-icon--gitpub">📡</div>
+            <div class="ai-meta">
+              <h3 class="ai-name">Gitpub</h3>
+              <span class="ai-alias">Pubby — Publisher AI</span>
+            </div>
+            <span class="ai-badge ai-badge--soon">Soon</span>
+          </div>
+          <p class="ai-desc">
+            Emits live file signals and monitors your repositories. Checks that
+            your repos are published and live, edits content, and builds them
+            using integrated toolchains.
+          </p>
+          <ul class="ai-features">
+            <li>Live repo signal monitoring</li>
+            <li>Auto-publish & deploy checks</li>
+            <li>In-place repo editing</li>
+            <li>Build pipeline automation</li>
+          </ul>
+          <button class="btn btn-ghost ai-card-btn" data-action="coming-soon">
+            Coming Soon 📡
+          </button>
+        </div>
+
+        <!-- Gitpro -->
+        <div class="ai-card" data-ai="gitpro">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-header">
+            <div class="ai-icon ai-icon--gitpro">🛸</div>
+            <div class="ai-meta">
+              <h3 class="ai-name">Gitpro</h3>
+              <span class="ai-alias">Quantum mechanic</span>
+            </div>
+            <span class="ai-badge ai-badge--soon">Soon</span>
+          </div>
+          <p class="ai-desc">
+            Top-level page content editor with an eye for design. Delivers
+            styling upgrades, layout ideas, and seamlessly assimilates external
+            inspiration into your projects.
+          </p>
+          <ul class="ai-features">
+            <li>Page content editing</li>
+            <li>Styling & design suggestions</li>
+            <li>Assimilation engine</li>
+            <li>Visual quantum upgrades</li>
+          </ul>
+          <button class="btn btn-ghost ai-card-btn" data-action="coming-soon">
+            Coming Soon 🛸
+          </button>
+        </div>
+
+        <!-- Gitpin -->
+        <div class="ai-card" data-ai="gitpin">
+          <div class="ai-card-glow"></div>
+          <div class="ai-card-header">
+            <div class="ai-icon ai-icon--gitpin">△</div>
+            <div class="ai-meta">
+              <h3 class="ai-name">Gitpin</h3>
+              <span class="ai-alias">Vector triangulator</span>
+            </div>
+            <span class="ai-badge ai-badge--soon">Soon</span>
+          </div>
+          <p class="ai-desc">
+            The precision pinner that triangulates the most valuable content
+            across your repositories. Identifies what deserves to be surfaced
+            and keeps it at the top.
+          </p>
+          <ul class="ai-features">
+            <li>Vector-based content ranking</li>
+            <li>Smart pin recommendations</li>
+            <li>Cross-repo triangulation</li>
+            <li>Priority surface mapping</li>
+          </ul>
+          <button class="btn btn-ghost ai-card-btn" data-action="coming-soon">
+            Coming Soon △
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       PINNED CONTENT DEMO
+  ══════════════════════════════════════ -->
+  <section class="section pins-section" id="pins">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Pinned by Gitpal <span class="title-icon">🥁</span></h2>
+        <p class="section-subtitle">Gitpal surfaces your most relevant content and professional signals in one place.</p>
+      </div>
+
+      <div class="pins-grid" id="pinsGrid">
+        <!-- Pins are injected by app.js -->
+      </div>
+
+      <div class="pins-cta">
+        <button class="btn btn-ghost" id="addPinBtn">+ Add pin via Gitpal</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       ABOUT / ECOSYSTEM
+  ══════════════════════════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="section-inner about-inner">
+      <div class="about-text">
+        <h2 class="section-title">Built for the<br /><span class="gradient-text">Git community</span></h2>
+        <p>
+          Gitpal is the first module of a growing AI ecosystem designed to
+          supercharge every GitHub workflow — from idea to deployment, from solo
+          dev to enterprise team.
+        </p>
+        <p>
+          Each AI agent in the suite owns a specific domain: ambient assistance,
+          publishing, design, and prioritization. Together they form a cohesive
+          intelligence layer on top of your existing Git workflow.
+        </p>
+        <div class="ecosystem-pills">
+          <span class="pill pill--active">🥁 Gitpal</span>
+          <span class="pill">📡 Gitpub</span>
+          <span class="pill">🛸 Gitpro</span>
+          <span class="pill">△ Gitpin</span>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="ecosystem-diagram">
+          <div class="eco-center">Git</div>
+          <div class="eco-node eco-node--gitpal" title="Gitpal">🥁</div>
+          <div class="eco-node eco-node--gitpub" title="Gitpub">📡</div>
+          <div class="eco-node eco-node--gitpro" title="Gitpro">🛸</div>
+          <div class="eco-node eco-node--gitpin" title="Gitpin">△</div>
+          <svg class="eco-lines" viewBox="0 0 200 200">
+            <line x1="100" y1="100" x2="100" y2="28" stroke="var(--accent)" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <line x1="100" y1="100" x2="172" y2="100" stroke="#38bdf8" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <line x1="100" y1="100" x2="100" y2="172" stroke="#a78bfa" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+            <line x1="100" y1="100" x2="28" y2="100" stroke="#34d399" stroke-width="1" stroke-dasharray="4 3" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">🥁</span>
+        <span class="logo-text">Gitpal</span>
+      </div>
+      <p class="footer-copy">Part of the Gitpal AI suite · Built for GitHub communities</p>
+      <div class="footer-ais">
+        <span title="Gitpal — active">🥁</span>
+        <span title="Gitpub — coming soon" class="dim">📡</span>
+        <span title="Gitpro — coming soon" class="dim">🛸</span>
+        <span title="Gitpin — coming soon" class="dim">△</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════
+       GITPAL FLOATING ORB  (injected by JS)
+  ══════════════════════════════════════ -->
+  <div id="gitpalOrb" class="gitpal-orb" title="Gitpal AI — click to chat" aria-label="Open Gitpal AI assistant">
+    <div class="gitpal-orb-inner">
+      <span class="gitpal-orb-emoji">🥁</span>
+      <span class="gitpal-orb-pulse"></span>
+    </div>
+    <div class="gitpal-orb-badge" id="orbBadge">1</div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       GITPAL CHAT PANEL
+  ══════════════════════════════════════ -->
+  <div id="gitpalPanel" class="gitpal-panel" role="dialog" aria-label="Gitpal AI chat" aria-hidden="true">
+    <div class="gp-panel-header">
+      <div class="gp-header-left">
+        <span class="gp-header-icon">🥁</span>
+        <div>
+          <div class="gp-header-name">Gitpal</div>
+          <div class="gp-header-status"><span class="status-dot"></span> Ace the palace AI · active</div>
+        </div>
+      </div>
+      <div class="gp-header-actions">
+        <button class="gp-icon-btn" id="minimizePanel" title="Minimize" aria-label="Minimize">─</button>
+        <button class="gp-icon-btn" id="closePanel" title="Close" aria-label="Close">✕</button>
+      </div>
+    </div>
+
+    <div class="gp-tabs">
+      <button class="gp-tab gp-tab--active" data-tab="chat">Chat</button>
+      <button class="gp-tab" data-tab="pins">Pins</button>
+      <button class="gp-tab" data-tab="moves">Pro Moves</button>
+    </div>
+
+    <!-- Chat Tab -->
+    <div class="gp-tab-content gp-tab-content--active" id="tab-chat">
+      <div class="gp-messages" id="gpMessages">
+        <!-- Messages injected by JS -->
+      </div>
+      <div class="gp-suggestions" id="gpSuggestions">
+        <!-- Quick suggestion chips injected by JS -->
+      </div>
+      <div class="gp-input-row">
+        <input type="text" class="gp-input" id="gpInput" placeholder="Ask Gitpal anything…" autocomplete="off" />
+        <button class="gp-send-btn" id="gpSendBtn" aria-label="Send">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Pins Tab -->
+    <div class="gp-tab-content" id="tab-pins">
+      <div class="gp-pins-list" id="gpPinsList">
+        <!-- Pins injected by JS -->
+      </div>
+      <button class="btn btn-primary gp-full-btn" id="suggestPinBtn">Suggest a pin 🥁</button>
+    </div>
+
+    <!-- Pro Moves Tab -->
+    <div class="gp-tab-content" id="tab-moves">
+      <div class="gp-moves-list" id="gpMovesList">
+        <!-- Moves injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" aria-live="polite"></div>
+
+  <script src="scripts/gitpal.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
