@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Gitpal — Ace the palace AI",
+  "version": "1.0.0",
+  "description": "Your ambient AI companion that reads any page, builds knowledge cards, and follows you everywhere on the internet.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Gitpal AI"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
