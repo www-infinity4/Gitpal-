@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitpal</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+      width: 284px;
+    }
+    .header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 13px 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo { font-size: 1.4rem; }
+    .name { font-size: .95rem; font-weight: 700; flex: 1; }
+    .badge {
+      font-size: .64rem; font-weight: 700;
+      background: rgba(249,115,22,.15);
+      color: #f97316;
+      border: 1px solid rgba(249,115,22,.3);
+      padding: 2px 7px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: .04em;
+    }
+    .status-row {
+      display: flex; align-items: center; gap: 7px;
+      padding: 9px 15px;
+      font-size: .76rem; color: #8b949e;
+      border-bottom: 1px solid #21262d;
+      background: #0d1117;
+    }
+    .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 5px #34d399;
+      animation: blink 2s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+    .body { padding: 13px 15px; }
+    .desc {
+      font-size: .77rem; color: #8b949e; line-height: 1.6;
+      margin-bottom: 13px;
+    }
+    .btn {
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      width: 100%; padding: 10px 0;
+      border: none; border-radius: 8px;
+      font-size: .86rem; font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+      margin-bottom: 7px;
+      font-family: inherit;
+    }
+    .btn-primary { background: #f97316; color: #fff; }
+    .btn-primary:hover { background: #fb923c; }
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid #30363d;
+      color: #8b949e;
+      font-size: .79rem; font-weight: 500;
+    }
+    .btn-ghost:hover { background: #21262d; color: #e6edf3; }
+    .error-msg {
+      display: none;
+      font-size: .74rem;
+      color: #f87171;
+      background: rgba(248,113,113,.1);
+      border: 1px solid rgba(248,113,113,.25);
+      border-radius: 6px;
+      padding: 7px 10px;
+      margin-bottom: 7px;
+      line-height: 1.5;
+    }
+    .footer {
+      padding: 9px 15px;
+      border-top: 1px solid #21262d;
+      font-size: .69rem; color: #6e7681; text-align: center;
+      background: #0d1117;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="logo">🥁</span>
+    <span class="name">Gitpal</span>
+    <span class="badge">Active</span>
+  </div>
+  <div class="status-row">
+    <span class="dot"></span>
+    Following you across the internet
+  </div>
+  <div class="body">
+    <p class="desc">
+      I'm reading this page right now. Open the orb to chat, observe any page,
+      and build your knowledge library as you browse.
+    </p>
+    <div class="error-msg" id="errorMsg"></div>
+    <button class="btn btn-primary" id="openChatBtn">Open Chat Panel 🥁</button>
+    <button class="btn btn-ghost" id="buildCardBtn">📚 Build Content Card</button>
+    <button class="btn btn-ghost" id="observeBtn">👁 Observe This Page</button>
+  </div>
+  <div class="footer">Gitpal AI · Ace the palace · Active on this tab</div>
+  <script src="popup.js"></script>
+</body>
+</html>
